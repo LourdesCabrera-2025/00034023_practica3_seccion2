@@ -1,0 +1,47 @@
+
+:root {
+    --blue: #1e90ff;
+    --green: #30a821;
+    --white: #fff;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.shopping-cart {
+    animation: fadeIn 2s ease-in-out;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+.btn-pay {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+.btn-pay:hover {
+    background-color: var(--green);
+    cursor: pointer;
+    transform: scale(1.05);
+}
