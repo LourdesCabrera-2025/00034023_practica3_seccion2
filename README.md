@@ -100,3 +100,32 @@ Two → Three → One, aunque en el HTML se mantenga el orden original.
 - `width: 64%;` → hace que el primer div sea más ancho que los otros (ocupa el 64% del ancho del contenedor). Esto afecta cómo se distribuyen los demás elementos porque Flexbox redistribuye el espacio restante.
 
 --------------
+
+## ¿Puedo diseñar toda mi web usando GRID? ¿Por qué se dan estos cambios entre tan pocas líneas de diseño CSS?
+
+Sí, se puede diseñar toda una web usando **CSS Grid**, ya que esta herramienta está pensada para organizar el **layout completo en dos dimensiones** (filas y columnas).  
+Con Grid se puede estructurar fácilmente el *header*, el contenido principal, un *sidebar* y el *footer* sin necesidad de muchas reglas CSS adicionales.  
+
+La razón por la que se dan estos cambios tan notorios con pocas líneas de código es porque **Grid es declarativo**: basta con definir las áreas y la distribución de columnas/filas en el contenedor, y el navegador automáticamente acomoda los elementos en esas posiciones.  
+
+Por ejemplo, con solo unas líneas como:  
+
+```css
+grid-template-areas: 
+  "Header Header Header Header"
+  "Main Main . Sidebar"
+  "Footer Footer Footer Footer";
+
+```
+
+ya logro que:
+
+* El header abarque toda la primera fila.
+
+* El main ocupe dos tercios y el sidebar un tercio de la segunda fila.
+
+- El footer se coloque al final ocupando toda la tercera fila.
+
+Esto antes requería muchas más reglas, pero con Grid se simplifica bastante.
+
+👉 Aunque se puede usar Grid para todo, en la práctica lo mejor es combinarlo con Flexbox: Grid para el esqueleto principal y Flexbox para organizar el contenido interno de cada sección.

@@ -1,0 +1,38 @@
+:root {
+    --blue: #1e90ff;
+    --white: #FFFFFF;
+    --pink: #E12AFB;
+    --green: #30A821;
+}
+
+.item-a {
+    grid-area: Header;
+    background-color: var(--blue);
+
+}
+
+.item-b{
+    grid-area: Main;
+    background-color: var(--pink);
+
+}
+
+.item-c {
+    grid-area: Sidebar;
+    background-color: var(--blue);
+}
+
+.item-d {
+    grid-area: Footer;
+    background-color: var(--green);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "Header Header Header Header"
+    "Main Main . Sidebar"
+    "Footer Footer Footer Footer";
+}
